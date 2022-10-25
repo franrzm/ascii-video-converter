@@ -1,0 +1,15 @@
+{
+  "name": "ascii-video",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "tsc -p ./ts/tsconfig.json --watch",
+    "build": "tsc -p ./ts/tsconfig.json"
+  },
+  "dependencies": {
+    "typescript": "^4.8.4"
+  },
+  "main": "public/js/index.js",
+  "author": "franrzm",
+  "license": "MIT"
+}
