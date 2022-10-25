@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ascii Video Converter</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="./uikit/uikit.min.css"/>
+
+    <!-- UIkit JS -->
+    <script src="./uikit/uikit.min.js" defer></script>
+    <script src="./uikit/uikit-icons.min.js" defer></script>
+
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+<canvas id="canvas-player" style="display: none;"></canvas>
+<div>
+    <div class="uk-grid uk-grid-collapse uk-grid-match" data-uk-grid>
+        <div class="uk-width-expand uk-width-1-4 uk-background-muted">
+            <div class="uk-flex uk-flex-column uk-flex-between uk-height-viewport">
+                <div>
+                    <video id="webcam-viewer" class="uk-width-1-1"></video>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-body">
+                        <button class="uk-button uk-button-primary uk-width-1-1" name="take-snapshot">
+                            <i data-uk-icon="icon: camera"></i> Take ASCII snapshot!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="uk-divider-vertical uk-height-viewport" data-uk-height-viewport/>
+        <div class="uk-width-auto">
+            <div id="ascii-video"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
