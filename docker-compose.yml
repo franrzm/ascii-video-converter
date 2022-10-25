@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  nginx:
+    container_name: nginx-ascii-video-converter
+    build:
+      context: ./nginx
+    ports:
+      - '${HTTP_PORT}:80'
+    volumes:
+      - ./app:/app
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - node
+    networks:
+      - ascii-video-converter
+  node:
+    container_name: node-ascii-video-converter
+    build:
+      context: ./app
+      target: ${ENV}
+      args:
+        NODE_ENV: ${ENV}
+    expose:
+      - "3000"
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    networks:
+      - ascii-video-converter
+
+networks:
+  ascii-video-converter:
