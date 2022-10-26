@@ -9,4 +9,5 @@ CMD yarn dev
 FROM node:16-alpine AS production
 WORKDIR /app
 COPY . /app
-RUN yarn install && yarn build
+RUN yarn install
+CMD yarn build
