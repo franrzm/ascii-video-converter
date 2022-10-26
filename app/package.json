@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "tsc -p ./ts/tsconfig.json --watch",
-    "build": "tsc -p ./ts/tsconfig.json"
+    "build": "tsc -p ./ts/tsconfig.prod.json"
   },
   "dependencies": {
     "typescript": "^4.8.4"

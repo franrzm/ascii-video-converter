@@ -5,7 +5,6 @@
     "sourceMap": true,
     "outFile": "../public/js/index.js",
     "lib": ["ES5", "ES6", "DOM", "ES2015"],
-    "removeComments": true
   },
   "exclude": [
     "node_modules"
